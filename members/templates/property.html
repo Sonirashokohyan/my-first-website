@@ -1,0 +1,44 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{% static 'css/details.css' %}">
+        
+        <link rel="stylesheet" href="link rel="stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+        <title>SSH.BRAND</title>
+    </head>
+
+<body>
+
+    <nav class="nav-details">
+        <h2>PRODUCT DETAILS</h2> 
+    </nav>
+
+    <section class="details-content">
+        <div class="wrap">
+            <div class="details-img">
+                <img src=" {%static 'images/1693346464169.png'%}" alt="">
+            </div>
+            <div class="details-txt">
+
+                <h2>{{ property_details.productName }} <br> {{ property_details.description }}</h2>
+    
+                <p>Material: {{ property_details.material }}</p>
+                <p>Price: {{ property_details.price }} {{'$'}}</p>
+                <p>Publish Date: {{ property_details.pub_date }}</p>
+                <p>Size: {{ property_details.size }}</p> <br>
+                <p>Back to <a href="/">Main Page</a></p>
+            </div>
+
+        </div>
+
+
+
+    </section>
+
+
+</body>
+</html>

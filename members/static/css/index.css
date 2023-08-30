@@ -1,0 +1,631 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ######### utility classes######### */
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+
+.btn{
+    display: inline-block;
+    padding: 1em 2.5em;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none;
+    margin-top: 1em;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.btn-primary{
+    color: #fff;
+    background: #571d1d;
+
+}
+
+/* ##########navbar styling############## */
+
+/* for desktop mode */
+.navbar input[type= "checkbox"],
+.navbar .hamburger-lines{
+    display: none;
+}
+.hamburger-lines{
+    display: block;
+    height: 4px;
+    width: 100%;
+    border-radius: 10px;
+}
+.navbar{
+    box-shadow: 0px 5px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 999;
+}
+
+.navbar-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+
+}
+
+.menu-items{
+    order: 2;
+    display: flex;
+}
+.menu-items li{
+    list-style: none;
+    margin-left: 1.5rem;
+    font-size: 1.8rem;
+    padding: 1rem;
+}
+.logo{
+    order: 1;
+    font-size: 3rem;
+    color: #6e2b2b;
+}
+
+.navbar a{
+    color: #444;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+
+}
+
+.navbar a:hover{
+    color: #6e2b2b;
+}
+
+/* ######################## show case style################### */
+.showcase-area{
+    height: 94vh;
+    background: linear-gradient(rgba(18, 18, 18, 0.144), rgba(32, 31, 31, 0.336)),url("/static/images/cover.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+
+}
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    font-size: 2rem;
+    text-align: center;
+
+}
+.main-title{
+    text-transform: uppercase;
+    margin: 1em;
+}
+
+.linear{
+    /* background: linear-gradient(rgba(162, 89, 194, 0.5), rgba(162, 89, 194, 0.5)); */
+    background: linear-gradient(rgba(87, 29, 29, 0.5), rgba(87, 29, 29, 0.5));
+    padding: 1rem;
+    margin: 1em;
+}
+
+/* ########################### about us ############################ */
+#about{
+    padding: 50px 0px;
+    background: #f5f5f7;
+}
+.about-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    /* margin-left: 25rem; */
+}
+
+#about h2{
+    font-size: 3.2rem;
+}
+#about p{
+    font-size: 1.6rem;
+    color: #555;
+}
+
+#about .small{
+    font-size: 1.6rem;
+    color: #666;
+    font-weight: 600
+}
+
+.about-img{
+    flex: 1 1 400px;
+    padding: 30px;
+    transform: translateX(150%);
+    animation: about-img-animation 1s ease-in-out forwards;
+
+}
+@keyframes about-img-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+.about-text{
+    flex: 1 1 400px;
+    padding: 30px;
+    margin: auto;
+    transform: translateX(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-img img{
+    display: block;
+    height: 400px;
+    max-width: 100%;
+    margin: auto;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* ##################################### category styling####################### */
+
+#clothes{
+    padding: 5rem 0 10rem 0;
+
+}
+ #clothes h2{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    color: #555;
+ }
+ .clothes-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+ }
+
+ .clothes-container img{
+    display: block;
+    width: 100%;
+    margin: 0.5em;
+    max-height: 300px;
+    object-fit: cover;
+    object-position: center;
+ }
+
+ .img-container{
+    margin: 0 1rem;
+    position: relative;
+ }
+ .img-content{
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 2;
+    text-align: center;
+    transition: all o.3s ease-in-out 0.1s;
+ }
+
+ .img-content h3{
+    color: #fff;
+    font-size: 3rem;
+
+ }
+
+ .img-content a{
+    font-size: 1.2rem;
+ }
+ .img-container::after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 102%;
+    height: 101%;
+    background: rgba(0, 0, 0, 0.871);
+    opacity: 0;
+    z-index: 1;
+
+    transform: scaleY(0);
+    transform-origin: 100% 100%;
+    transition: all 0.3s ease-in-out;
+ }
+
+ .img-container:hover::after{
+    opacity: 1;
+    transform: scaleY(1);
+ }
+ .img-container:hover .img-content{
+    opacity: 1;
+    top: 40%;
+ }
+
+.clothes-type{
+    margin: 2em;
+}
+
+
+/* ############# latest products########### */
+
+.products{
+    text-align: center;
+    padding: 5rem 0 2rem 0 ;
+    font-size: 3rem;
+    color: #6e2b2b;
+}
+.shop-items{
+     background-color: #f5f5f7;
+     height: auto;
+}
+.shop-items .box{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+   
+}
+
+.shop-items img{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+.shop-items h3{
+    font-size: 1.5rem;
+}
+
+.shop-items a{
+    text-decoration: none;
+    color: black;
+}
+
+ .box1, .box2, .box3, .box4{
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 4%;
+    transition: 500ms ease-in-out;
+}
+
+.shop-items .box-b{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.shop-items .box-c{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.shop-items .box-d{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.shop-items .box-e{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+#footer h2{
+    text-align: center;
+    font-size: 2rem;
+    padding: 3rem;
+    font-weight: 500;
+    color: #fff;
+    background: rgb(65, 65, 65);
+}
+
+.shop-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* ########################### about us ############################ */
+.information{
+    padding: 50px 0px;
+    background: #fff;
+    height: 95vh;
+    /* width: 50vw; */
+    margin: 5rem  auto;
+
+}
+.info-text{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.info-text h1{
+    font-size: 3.2rem;
+    color: #6e2b2b;
+    padding: 2rem;
+}
+.info-text p{
+    font-size: 1.6rem;
+    color: #555;
+    padding-bottom: 3rem;
+}
+
+.info-data{
+    font-size: 1.7rem;
+    padding: 5rem;
+    color: #571d1d;
+    display: inline-block;
+}
+.info-data a{
+    text-decoration: none;
+    padding: 1.5rem;
+    color: #555;
+}
+.info-data li{
+    list-style-type: none;
+}
+
+.info-data a:hover{
+    background-color: #571d1d;
+    color: #fff;
+    padding: 0.4rem;
+    border-radius: 10%;
+}
+/* #########################.properties ######################### */
+.latest-product h1{
+    color: #571d1d;
+    text-align: center;
+    padding: 5rem;
+}
+
+
+.properties {
+    border-radius: 2rem;
+  }
+  .properties-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18rem, auto));
+    gap: 12rem;
+    padding: 0.5px;
+  }
+  .properties-container .box {
+    padding: 10px;
+    border-radius: 1rem;
+  }
+  .properties-container .box:hover {
+    transform: translatey(-10px);
+    transition: 0.5s;
+  }
+  .properties-container .box img {
+    border-radius: 1rem;
+    height: 220px;
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+  }
+  .properties-container .box h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    float: right;
+  }
+  .properties-container .box .content {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+  }
+  .properties-container .box .content .text h3 {
+    font-weight: 500;
+  }
+  .properties-container .box .content .text p {
+    font-size: 0.8rem;
+  }
+  .properties-container .box .content .icon {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+  }
+  .properties-container .box .content .icon .bx {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+  }
+  .properties-container .box .content .icon span {
+    font-size: 12px;
+    font-weight: 500;
+    margin-left: 4px;
+  }
+  .box .rent h3 {
+    border: 2px solid #090909;
+    border-radius: 10%;
+    padding: 0.3rem 0.7rem;
+    margin: 0rem 0.3rem 0.5rem 0;
+    color: #000;
+  }
+
+
+
+/* ############ media queris ############### */
+@media (max-width: 768px){
+    .navbar{
+        opacity: 0.95;
+    }
+    .navbar-container input[type='checkbox'],
+    .navbar-container .navbar-lines{
+        display: block;
+    }
+    .navbar-container{
+        display: block;
+        position: relative;
+        height: 64px;
+    }
+    .navbar-container input[type='checkbox']{
+        opacity: 0;
+        position: absolute;
+        height: 32px;
+        width: 40px;
+        top: 20px;
+        left: 20px;
+        z-index: 5;
+        /* opacity: 0; */
+    }
+    .navbar-container .hamburger-lines{
+        display: block;
+        height: 32px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        color: #000;
+    }
+
+    .navbar .navbar-container .line{
+        display: block;
+        height: 4px;
+        width: 100%;
+        border-radius: 10px;
+        background: #090909;
+    }
+    .navbar-container .hamburger-lines .line1{
+        transform-origin: 0% 0%;
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line2{
+        transition: transform 0.4s ease-in-out;
+    }
+    .navbar-container .hamburger-lines .line3{
+        transform-origin: 0% 100%;
+        transition: transform 0.4s ease-in-out;
+    }
+
+    .navbar .menu-items{
+        padding-top: 100px;
+        background: #fff;
+        height: 100vh;
+        max-width: 300px;
+        transform: translate(-150%);
+        display: flex;
+        flex-direction: column;
+        margin-left: -40px;
+        padding-left: 50px;
+        transition: transform 0.5s ease-in-out;
+        box-shadow: 5px 0px 10px 0px #aaa;
+    }
+
+    .navbar .menu-items li{
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 500;
+    }
+
+    .logo{
+        position: absolute;
+        top: 10px;
+        right: 50px;
+        font-size: 3rem;
+    }
+    
+    .navbar-container input[type='checkbox']:checked ~ .menu-items{
+        display: block;
+        transform: translateX(0);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line1{
+        transform: rotate(45deg);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line2{
+        transform: scaleY(0);
+    }
+    .navbar-container input[type='checkbox']:checked ~ .hamburger-lines .line3{
+        transform: rotate(-45deg);
+    }
+
+    /* ################ cetagory######### */
+    .clothes-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .clothes-type:not(:last-child){
+        margin-bottom: 3rem;
+    }
+    .clothes-type{
+        box-shadow: 5px 5px 10px 0px #aaa;
+    }
+    .img-container{
+        margin: 0;
+    }
+}
+
+/* ############## small screen ############### */
+@media (max-width: 500px){
+    html{
+        font-size: 50%;
+    }
+    .shop-items img{
+        margin: auto;
+    }
+    .shop-items h1{
+        text-align: center;
+        margin: auto;
+
+    }
+    .shop-items .box, .box-b, .box-c, .box-d, .box-e{
+        flex-direction: column;
+        text-align: center;
+    }
+    .shop-items .box1, .box2, .box3, .box4{
+        flex-direction: column;
+        text-align: center;
+    }
+    .properties-container{
+        margin: auto;
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+

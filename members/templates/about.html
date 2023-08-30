@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="link rel="stylesheet href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="{% static 'css/index.css' %}">
+        <link rel="stylesheet" href="{% static 'css/about.css' %}">
+
+        <title>SSH.BRAND</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="navbar-container container">
+            <input type="checkbox">
+            <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+            </div>
+            <ul class="menu-items">
+                <li><a href="/">HOME</a></li>
+                <li><a href="/home/about">ABOUT</a></li>
+                <li><a href="/home/contact">CONTACT</a></li>
+                <li><a href="/home/men">MEN</a></li>
+                <li><a href="/home/women">WOMEN</a></li>
+            </ul>
+            <h1 class="logo">SSH</h1>
+        </div>
+
+    </nav> 
+
+    <section class="about">
+        <div class="container">
+            <h2 class="lg-heading text-black about-heading">ABOUT US</h2>
+            <p class="text-gray">Afghan Traditional Clothing Brand, an online destination that beautifully showcases the rich tapestry of Afghan culture through an exquisite collection of authentic clothing.</p>
+            <div class="about-wrapper">
+                <div class="left">
+                    <ul >
+                        <li>Timeless Elegance</li>
+                        <li>Unique Fashion Statement</li>
+                        <li>Craftsmanship at it's Finest</li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <ul>
+                        <li>Versatile Style</li>
+                        <li>Global Shipping</li>
+                        <li>Unforgettable Gifts</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="banner">
+                <div class="banner-left">
+                    <p class="banner-line">Contact us for any inquiries, feedback, or assistance</p>
+                </div>
+                <div class="banner-right">
+                    <a href="/home/contact" class="btn-banner"> CONTACT US</a>
+                </div>
+            </div>
+        </div>
+        
+        
+    </section>
+
+    <footer id="footer">
+        <h2>SSH website &copy; all rights reserved. </h2>
+    </footer>
+    
+    </body>
+    </html>

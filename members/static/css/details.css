@@ -1,0 +1,43 @@
+/* ##################### datail page styling#################### */
+
+.nav-details{
+    background-color: #571d1d;
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    color: aliceblue;
+  }
+
+  .nav-details h2{
+    padding: 10px;
+  }
+
+.details-content .wrap{
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+.wrap{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.5rem;
+}
+
+.wrap a{
+    padding: 0.5rem;
+    margin: 2rem;
+    background-color: #571d1d;
+    border-radius: 10%;
+    color: aliceblue;
+    text-decoration: none;
+}
+.wrap a:hover{
+    background-color: #6c2828;
+}
+.wrap .details-img img{
+  width: 20rem;
+  height: 20rem;
+  border-radius: 50%;
+  padding: 5rem;
+}

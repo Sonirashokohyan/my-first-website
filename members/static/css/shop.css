@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* ############### women and men############## */
+.nav{
+    font-size: 2rem;
+    margin: 5rem 10rem 0 10rem;
+    
+}
+.nav a{
+    text-decoration: none;
+    font-weight: 500;
+    background-color: #6e2b2b;
+    color: aliceblue;
+    padding: 2rem;
+    border-radius: 3rem;
+}
+
+/* ############# shop products########### */
+
+.products{
+    text-align: center;
+    padding: 10rem 0 2rem 0 ;
+    font-size: 2.5rem;
+    color: #6e2b2b;
+}
+.shop-items{
+    width: 40vw;
+    margin: auto;
+}
+.shop-items .boxx{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.shop-items img{
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+.shop-items h3{
+    font-size: 1.5rem;
+}
+
+.shop-items a{
+    text-decoration: none;
+    color: black;
+}
+
+ .box1, .box2, .box3, .box4{
+    padding: 0.5em;
+    margin: 0.5em;
+    border-radius: 4%;
+    transition: 500ms ease-in-out;
+}
+
+.shop-items .box-a{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.shop-items .box-b{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.shop-items .box-c{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.shop-items .box-d{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.shop-items .box-e{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+.shop-items .box-f{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
